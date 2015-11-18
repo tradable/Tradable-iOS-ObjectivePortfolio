@@ -7,12 +7,23 @@
 //
 
 #import "AppDelegate.h"
+@import TradableAPI;
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
+
+
+//Added
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    
+    //Connected to the Tradable API
+    [[Tradable sharedInstance] activateAfterLaunchWithURL:url];
+    
+    return YES;
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

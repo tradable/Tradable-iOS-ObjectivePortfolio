@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BDFDE631BFC7294003A82DD /* TradableAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BDFDE621BFC7294003A82DD /* TradableAPI.framework */; };
+		4BDFDE641BFC7294003A82DD /* TradableAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4BDFDE621BFC7294003A82DD /* TradableAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4BEA39681BFB6AB6007EF27D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEA39671BFB6AB6007EF27D /* main.m */; };
 		4BEA396B1BFB6AB6007EF27D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEA396A1BFB6AB6007EF27D /* AppDelegate.m */; };
 		4BEA396E1BFB6AB6007EF27D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEA396D1BFB6AB6007EF27D /* ViewController.m */; };
@@ -15,7 +17,22 @@
 		4BEA39761BFB6AB6007EF27D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BEA39741BFB6AB6007EF27D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4BDFDE651BFC7294003A82DD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4BDFDE641BFC7294003A82DD /* TradableAPI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4BDFDE621BFC7294003A82DD /* TradableAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TradableAPI.framework; path = ObjectivePortfolio/TradableAPI.framework; sourceTree = "<group>"; };
 		4BEA39631BFB6AB6007EF27D /* ObjectivePortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectivePortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BEA39671BFB6AB6007EF27D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4BEA39691BFB6AB6007EF27D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BDFDE631BFC7294003A82DD /* TradableAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +60,7 @@
 		4BEA395A1BFB6AB6007EF27D = {
 			isa = PBXGroup;
 			children = (
+				4BDFDE621BFC7294003A82DD /* TradableAPI.framework */,
 				4BEA39651BFB6AB6007EF27D /* ObjectivePortfolio */,
 				4BEA39641BFB6AB6007EF27D /* Products */,
 			);
@@ -89,6 +108,7 @@
 				4BEA395F1BFB6AB6007EF27D /* Sources */,
 				4BEA39601BFB6AB6007EF27D /* Frameworks */,
 				4BEA39611BFB6AB6007EF27D /* Resources */,
+				4BDFDE651BFC7294003A82DD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -110,6 +130,7 @@
 				TargetAttributes = {
 					4BEA39621BFB6AB6007EF27D = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 83RR8433N3;
 					};
 				};
 			};
@@ -213,7 +234,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -250,7 +271,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -261,10 +282,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ObjectivePortfolio/TradableAPI.framework",
+					"$(PROJECT_DIR)/ObjectivePortfolio",
+				);
 				INFOPLIST_FILE = ObjectivePortfolio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tradable.objctest.ObjectivePortfolio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -272,10 +301,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ObjectivePortfolio/TradableAPI.framework",
+					"$(PROJECT_DIR)/ObjectivePortfolio",
+				);
 				INFOPLIST_FILE = ObjectivePortfolio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tradable.objctest.ObjectivePortfolio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -298,6 +335,7 @@
 				4BEA397C1BFB6AB6007EF27D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

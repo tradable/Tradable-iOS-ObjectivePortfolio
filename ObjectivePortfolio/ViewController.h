@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@import TradableAPI;
 
+//Conforms to TradableAPIDelegate protocol
+@interface ViewController : UIViewController <TradableAPIDelegate>
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
 @end
-
