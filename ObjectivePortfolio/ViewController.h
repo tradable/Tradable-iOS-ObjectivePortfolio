@@ -14,5 +14,6 @@
 @interface ViewController : UIViewController <TradableAPIDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UIButton *activateButton;
 
 @end

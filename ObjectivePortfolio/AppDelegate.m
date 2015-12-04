@@ -27,6 +27,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    NSURL* url = [launchOptions objectForKey:UIApplicationLaunchOptionsURLKey];
+
+    if (url != nil) {
+        //Connected to the Tradable API
+        [[Tradable sharedInstance] activateAfterLaunchWithURL: url];
+    }
+    
     // Override point for customization after application launch.
     return YES;
 }
