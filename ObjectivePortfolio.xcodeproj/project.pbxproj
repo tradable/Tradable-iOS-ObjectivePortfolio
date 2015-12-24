@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4BDF4FB11C11A7AE0082DEBC /* TradableAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BDF4FB01C11A7AE0082DEBC /* TradableAPI.framework */; };
-		4BDF4FB21C11A7AF0082DEBC /* TradableAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4BDF4FB01C11A7AE0082DEBC /* TradableAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4B7B1F4B1C2C1FEC00CB64C8 /* TradableAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B7B1F4A1C2C1FEC00CB64C8 /* TradableAPI.framework */; };
+		4B7B1F4C1C2C1FEC00CB64C8 /* TradableAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B7B1F4A1C2C1FEC00CB64C8 /* TradableAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4BEA39681BFB6AB6007EF27D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEA39671BFB6AB6007EF27D /* main.m */; };
 		4BEA396B1BFB6AB6007EF27D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEA396A1BFB6AB6007EF27D /* AppDelegate.m */; };
 		4BEA396E1BFB6AB6007EF27D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEA396D1BFB6AB6007EF27D /* ViewController.m */; };
@@ -24,7 +24,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4BDF4FB21C11A7AF0082DEBC /* TradableAPI.framework in Embed Frameworks */,
+				4B7B1F4C1C2C1FEC00CB64C8 /* TradableAPI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -32,7 +32,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4BDF4FB01C11A7AE0082DEBC /* TradableAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TradableAPI.framework; path = ObjectivePortfolio/TradableAPI.framework; sourceTree = "<group>"; };
+		4B7B1F4A1C2C1FEC00CB64C8 /* TradableAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TradableAPI.framework; path = Frameworks/TradableAPI.framework; sourceTree = "<group>"; };
 		4BEA39631BFB6AB6007EF27D /* ObjectivePortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectivePortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BEA39671BFB6AB6007EF27D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4BEA39691BFB6AB6007EF27D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BDF4FB11C11A7AE0082DEBC /* TradableAPI.framework in Frameworks */,
+				4B7B1F4B1C2C1FEC00CB64C8 /* TradableAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +60,7 @@
 		4BEA395A1BFB6AB6007EF27D = {
 			isa = PBXGroup;
 			children = (
-				4BDF4FB01C11A7AE0082DEBC /* TradableAPI.framework */,
+				4B7B1F4A1C2C1FEC00CB64C8 /* TradableAPI.framework */,
 				4BEA39651BFB6AB6007EF27D /* ObjectivePortfolio */,
 				4BEA39641BFB6AB6007EF27D /* Products */,
 			);
@@ -287,6 +287,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/ObjectivePortfolio/TradableAPI.framework",
 					"$(PROJECT_DIR)/ObjectivePortfolio",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = ObjectivePortfolio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -306,6 +307,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/ObjectivePortfolio/TradableAPI.framework",
 					"$(PROJECT_DIR)/ObjectivePortfolio",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = ObjectivePortfolio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
