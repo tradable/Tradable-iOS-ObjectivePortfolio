@@ -15,6 +15,7 @@
 		4BEA39711BFB6AB6007EF27D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BEA396F1BFB6AB6007EF27D /* Main.storyboard */; };
 		4BEA39731BFB6AB6007EF27D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BEA39721BFB6AB6007EF27D /* Assets.xcassets */; };
 		4BEA39761BFB6AB6007EF27D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BEA39741BFB6AB6007EF27D /* LaunchScreen.storyboard */; };
+		5B9ACA0D9C9DEDE5BA810372 /* Pods_ObjectivePortfolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913E1BDD83708A0E2DF14290 /* Pods_ObjectivePortfolio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,9 @@
 		4BEA39721BFB6AB6007EF27D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BEA39751BFB6AB6007EF27D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BEA39771BFB6AB6007EF27D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		913E1BDD83708A0E2DF14290 /* Pods_ObjectivePortfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectivePortfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E53147E4AC8F3B2D80D3B491 /* Pods-ObjectivePortfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectivePortfolio.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectivePortfolio/Pods-ObjectivePortfolio.release.xcconfig"; sourceTree = "<group>"; };
+		ECF728CBD7B6E7D24171E927 /* Pods-ObjectivePortfolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectivePortfolio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectivePortfolio/Pods-ObjectivePortfolio.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,18 +55,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B7B1F4B1C2C1FEC00CB64C8 /* TradableAPI.framework in Frameworks */,
+				5B9ACA0D9C9DEDE5BA810372 /* Pods_ObjectivePortfolio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		308E82B9F720526DE7423E3A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ECF728CBD7B6E7D24171E927 /* Pods-ObjectivePortfolio.debug.xcconfig */,
+				E53147E4AC8F3B2D80D3B491 /* Pods-ObjectivePortfolio.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4BEA395A1BFB6AB6007EF27D = {
 			isa = PBXGroup;
 			children = (
-				4B7B1F4A1C2C1FEC00CB64C8 /* TradableAPI.framework */,
 				4BEA39651BFB6AB6007EF27D /* ObjectivePortfolio */,
 				4BEA39641BFB6AB6007EF27D /* Products */,
+				308E82B9F720526DE7423E3A /* Pods */,
+				84216317A57184C67210F50B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +113,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		84216317A57184C67210F50B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B7B1F4A1C2C1FEC00CB64C8 /* TradableAPI.framework */,
+				913E1BDD83708A0E2DF14290 /* Pods_ObjectivePortfolio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,10 +129,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BEA397A1BFB6AB6007EF27D /* Build configuration list for PBXNativeTarget "ObjectivePortfolio" */;
 			buildPhases = (
+				07CD4FDEACF5A46B5015597A /* [CP] Check Pods Manifest.lock */,
 				4BEA395F1BFB6AB6007EF27D /* Sources */,
 				4BEA39601BFB6AB6007EF27D /* Frameworks */,
 				4BEA39611BFB6AB6007EF27D /* Resources */,
 				4BDFDE651BFC7294003A82DD /* Embed Frameworks */,
+				B22D269A5D734A4C44960B63 /* [CP] Embed Pods Frameworks */,
+				D79214D1AFC4323EDCF58C15 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,6 +191,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07CD4FDEACF5A46B5015597A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B22D269A5D734A4C44960B63 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjectivePortfolio/Pods-ObjectivePortfolio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D79214D1AFC4323EDCF58C15 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjectivePortfolio/Pods-ObjectivePortfolio-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4BEA395F1BFB6AB6007EF27D /* Sources */ = {
@@ -280,18 +355,28 @@
 		};
 		4BEA397B1BFB6AB6007EF27D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECF728CBD7B6E7D24171E927 /* Pods-ObjectivePortfolio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/ObjectivePortfolio/TradableAPI.framework",
+					"$(inherited)",
 					"$(PROJECT_DIR)/ObjectivePortfolio",
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = ObjectivePortfolio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"SwiftKeychainWrapper\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tradable.objctest.ObjectivePortfolio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -300,18 +385,28 @@
 		};
 		4BEA397C1BFB6AB6007EF27D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E53147E4AC8F3B2D80D3B491 /* Pods-ObjectivePortfolio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/ObjectivePortfolio/TradableAPI.framework",
+					"$(inherited)",
 					"$(PROJECT_DIR)/ObjectivePortfolio",
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = ObjectivePortfolio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"SwiftKeychainWrapper\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tradable.objctest.ObjectivePortfolio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

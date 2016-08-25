@@ -16,39 +16,31 @@
 
 @implementation ViewController
 
-@synthesize nameLabel;
+@synthesize accountLabel;
 @synthesize activateButton;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    //Assign the Tradable delegate to self
-    [[Tradable sharedInstance] setDelegate:self];
+    //Assign the Tradable auth delegate to self
+    [[Tradable sharedInstance] setAuthDelegate:self];
     
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-//Delegate method callback; TradableAPI is ready to be used
-- (void)tradableReady {
-    NSLog(@"Tradable is READY");
+//Authentication delegate method callback; TradableAPI is ready to be used for certain account
+- (void)tradableReady:(TradableAccount *)forAccount {
+    NSLog(@"Tradable is READY for account: %@", forAccount);
     
     [activateButton setHidden:YES];
-    
-    //Gets the current OS user
-    [[Tradable sharedInstance] getCurrentUser:^(TradableOSUser * osUser, TradableError * trError) {
-        [nameLabel setHidden:NO];
-        
-        if (osUser != nil) {
-            [nameLabel setText:[NSString stringWithFormat:@"Hi %@!", osUser.userName]];
-        } else {
-            [nameLabel setText:[NSString stringWithFormat:@"%@", trError.errorDescription]];
-        }
-    }];
+
+    [accountLabel setText:[NSString stringWithFormat:@"You are now using %@.", forAccount.displayName]];
+    [accountLabel setHidden:NO];
 }
 
 - (IBAction)activateTradableTouched:(UIButton *)sender {
-    //Begins authentication flow with clientID 100007 and custom URI
-    [Tradable authenticateWithAppIdAndUri:100007 uri:@"com.tradable.example2://oauth2callback" webView: nil];
+    //Begins authentication flow with clientID 100007 and custom URI in system browser; will store token in keychain and use it on the next run, if possible.
+    [[Tradable sharedInstance] activateOrAuthenticate:100007 uri:@"com.tradable.example2://oauth2callback" webView:nil];
 }
 
 - (void)didReceiveMemoryWarning {
