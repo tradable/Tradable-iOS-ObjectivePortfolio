@@ -6,7 +6,7 @@ target 'ObjectivePortfolio' do
   use_frameworks!
 
   # Pods for ObjectivePortfolio
-    pod 'Alamofire', '~> 3.4'
+    pod 'Alamofire', '~> 3.5'
     pod 'SwiftyJSON', '~> 2.3'
     pod 'SwiftKeychainWrapper', '~> 2.0'
 
