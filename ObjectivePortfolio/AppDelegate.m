@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     
     //Connected to the Tradable API
-    [[Tradable sharedInstance] activateAfterLaunchWithURL:url];
+    [[Tradable sharedInstance] activateAfterLaunchWithUrl:url];
     
     return YES;
 }
@@ -32,7 +32,7 @@
 
     if (url != nil) {
         //Connected to the Tradable API
-        [[Tradable sharedInstance] activateAfterLaunchWithURL: url];
+        [[Tradable sharedInstance] activateAfterLaunchWithUrl: url];
     }
     
     // Override point for customization after application launch.

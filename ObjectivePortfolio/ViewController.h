@@ -10,8 +10,8 @@
 
 @import TradableAPI;
 
-//Conforms to TradableAPIDelegate protocol
-@interface ViewController : UIViewController <TradableAuthDelegate>
+//Conforms to TradableAuthDelegate and TradableEventsDelegate
+@interface ViewController : UIViewController <TradableAuthDelegate, TradableEventsDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *accountLabel;
 @property (weak, nonatomic) IBOutlet UIButton *activateButton;
